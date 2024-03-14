@@ -1,0 +1,77 @@
+<!-- style=" margin: auto; width: 50%;" -->
+<div>
+  <div>
+    <label>
+      <input type="radio" [(ngModel)]="selectedOption" value="option1"> Option 1
+    </label>
+    <label>
+      <input type="radio" [(ngModel)]="selectedOption" value="option2"> Option 2
+    </label>
+  </div>
+
+  <button (click)="exportExcel()">Export to Excel</button>
+
+  <table id="excel-table">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Username</th>
+      <th>Email</th>
+    </tr>
+    <tr *ngFor="let item of userList">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.username}}</td>
+      <td>{{item.email}}</td>
+    </tr>
+  </table>
+
+  <!-- <table id="excel-table">
+    <tr>
+      <th>Code</th>
+      <th>Dealer Name</th>
+      <th>Region</th>
+      <th>Market</th>
+      <th>[Actual] xtime Appt. LT</th>
+      <th>[RGN Avg.] xtime appointment lead time</th>
+      <th>% Actual LT /RGN Avg. LT</th>
+      <th>[SUPPLY] Issue/Opportunity Area</th>
+      <th>[Actual] # Tech</th>
+
+      <th>Available Hour/Tech/Week</th>
+      <th>Available Hour/Week</th>
+      <th>Proficiency</th>
+      <th>Flat Rate Hour /week</th>
+      <th>Flat Rate Hour /RO(CP+W+I)</th>
+      <th>[Potential] #RO(CP+W+I) /week</th>
+      <th>[Potential] #RO(CP+W+I) /year</th>
+      <th>[Actual] #RO (CP+W+I) /year</th>
+      <th>[Actual] #RO (CP+W) /year</th>
+      <th>Ratio of CP+W to Total</th>
+      <th>[Potential] #RO (CP+W) /year</th>
+      <th>[Actual] % usage of potential capacity</th>
+      <th># Tech to add</th>
+
+      <th>Necessary # of Stalls (Tech:Stall = 1:1)</th>
+      <th>[Actual] # Stalls</th>
+      <th>[Actual] % usage of potential capacity</th>
+      <th># Stall to add</th>
+      <th>[Actual] # SA</th>
+      <th>[Potential] #RO (CP+W+I) /SA/day</th>
+      <th>[Potential]#RO (CP+W+I) /week *5.5days/wk</th>
+      <th>[Potential] #RO (CP+W+I) /year</th>
+      <th>[Actual] % usage of potential capacity</th>
+      <th># SA to add </th>
+      <th>$ Labor GP (MAZDA) R12</th>
+      <th>[Actual] $Labor GP per Stall /Year</th>
+
+      <th>[Actual] UIO</th>
+      <th>[Actual] Unique VIN serviced</th>
+      <th>Dealer Retention</th>
+      <th>[RGN Avg.] Dealer Retention</th>
+      <th>Avg RO</th>
+      <th>[RGN Avg.] Avg RO</th>
+      <th>[DEAMND] Issue/Opportunity Area (vs. Region Avg.)</th>
+    </tr>
+  </table> -->
+</div>
